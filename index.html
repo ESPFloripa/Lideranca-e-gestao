@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialização em Liderança e Gestão em Saúde - ESP Florianópolis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 82, 155, 0.85), rgba(0, 82, 155, 0.85)), url('https://i.imgur.com/HyqUrI3.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .section-title {
+            border-left: 4px solid #00A8E8;
+            padding-left: 1rem;
+        }
+        .cta-button {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 168, 232, 0.4);
+        }
+        .feature-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Flip Card Styles */
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 320px; /* Increased height */
+            perspective: 1000px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+        .flip-card-front {
+            /* A cor de fundo foi removida para dar lugar à imagem */
+        }
+        .flip-card-back {
+            background-color: #00529B; /* Cor azul do tema */
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-800">
+                <span class="text-blue-600">ESP</span> Florianópolis
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#sobre" class="text-gray-600 hover:text-blue-600">Sobre o Curso</a>
+                <a href="#docentes" class="text-gray-600 hover:text-blue-600">Corpo Docente</a>
+                <a href="#estrutura" class="text-gray-600 hover:text-blue-600">Estrutura</a>
+                <a href="#inscricoes" class="text-gray-600 hover:text-blue-600">Processo Seletivo</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#sobre" class="block py-2 px-4 text-sm hover:bg-gray-100">Sobre o Curso</a>
+            <a href="#docentes" class="block py-2 px-4 text-sm hover:bg-gray-100">Corpo Docente</a>
+            <a href="#estrutura" class="block py-2 px-4 text-sm hover:bg-gray-100">Estrutura</a>
+            <a href="#inscricoes" class="block py-2 px-4 text-sm hover:bg-gray-100">Processo Seletivo</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero-bg">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Especialização em Liderança e Gestão em Saúde</h1>
+                <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Capacite-se para os desafios da gestão no sistema de saúde, desenvolva habilidades de liderança e transforme a sua carreira.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxAJK4-Q4ronreW4BRYTjkw8xlJEIjW3cRYUtuBdyqjpeqvQ/viewform?usp=header" target="_blank" class="cta-button bg-cyan-400 text-gray-900 font-bold py-3 px-8 rounded-full text-lg inline-block">
+                    Inscreva-se Agora
+                </a>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-blue-100">
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg">Duração</h3>
+                        <p>2 anos</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg">Início</h3>
+                        <p>Março de 2026</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg">Aulas</h3>
+                        <p>Quartas-feiras, 15h às 19h</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre o Curso -->
+        <section id="sobre" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2 section-title">Sobre o Curso</h2>
+                <p class="text-gray-600 mb-12 text-center">Uma formação completa para profissionais que atuam ou pretendem atuar em posições de liderança e gestão na saúde.</p>
+                
+                <!-- Video embed -->
+                <div class="max-w-3xl mx-auto my-12 rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative" style="padding-bottom: 56.25%;">
+                        <iframe src="https://www.youtube.com/embed/GayrLbWEfDI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full"></iframe>
+                    </div>
+                </div>
+
+                <!-- Accordion for details -->
+                <div class="max-w-3xl mx-auto mt-12 space-y-4">
+                    <!-- Accordion Item 1: Objetivo -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-5 bg-gray-50 hover:bg-gray-100 focus:outline-none transition">
+                            <h3 class="text-xl font-semibold text-gray-800">Objetivo</h3>
+                            <i data-feather="chevron-down" class="transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content hidden p-5 bg-white">
+                            <p class="text-gray-600">Capacitar profissionais de nível superior para o desenvolvimento de atividades de gestão no sistema de saúde, fomentando a reflexão crítica, a qualificação dos gestores e a criação de uma rede de apoio e troca de experiências.</p>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2: Metodologia -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-5 bg-gray-50 hover:bg-gray-100 focus:outline-none transition">
+                            <h3 class="text-xl font-semibold text-gray-800">Metodologia Inovadora</h3>
+                            <i data-feather="chevron-down" class="transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content hidden p-5 bg-white">
+                            <p class="text-gray-600">Utilizamos metodologias ativas de ensino e aprendizagem, com base no diálogo e na problematização da realidade. Formamos gestores ativos, reflexivos, criativos e autônomos, com foco na aplicação prática do conhecimento.</p>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3: Formato -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-5 bg-gray-50 hover:bg-gray-100 focus:outline-none transition">
+                            <h3 class="text-xl font-semibold text-gray-800">Formato</h3>
+                            <i data-feather="chevron-down" class="transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content hidden p-5 bg-white">
+                            <p class="text-gray-600">O curso é oferecido em formato híbrido, combinando encontros presenciais semanais com atividades complementares em ambiente virtual de aprendizagem (EAD), proporcionando flexibilidade e aprofundamento dos estudos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <h3 class="text-2xl font-semibold text-center text-gray-800 mb-8">O que você vai aprender?</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Card 1 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.imgur.com/SfGmLc8.jpg');">
+                                    <i data-feather="user-check" class="h-12 w-12 mb-4"></i>
+                                    <h4 class="font-bold text-2xl text-center">Liderança e Desenvolvimento</h4>
+                                    <p class="text-gray-200 mt-2">(Passe o mouse para ver os detalhes)</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h4 class="font-bold text-xl mb-3">Liderança e Desenvolvimento</h4>
+                                    <p class="text-sm text-blue-100">Explore temas como autoconhecimento, estilos de liderança e ética. Desenvolva habilidades para trabalho em equipe, recrutamento, gestão de times de alta performance, avaliação de desempenho e comunicação eficaz.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.imgur.com/wLjmKpD.jpg');">
+                                     <i data-feather="bar-chart-2" class="h-12 w-12 mb-4"></i>
+                                    <h4 class="font-bold text-2xl text-center">Gestão do Sistema de Saúde</h4>
+                                    <p class="text-gray-200 mt-2">(Passe o mouse para ver os detalhes)</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h4 class="font-bold text-xl mb-3">Gestão do Sistema de Saúde</h4>
+                                    <p class="text-sm text-blue-100">Aprofunde-se na teoria dos sistemas de saúde, financiamento e direito sanitário. Aprenda a realizar análises da situação de saúde, utilizando indicadores, monitoramento e avaliação para a gestão local de processos e programas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.imgur.com/NMzt9PG.jpg');">
+                                    <i data-feather="link" class="h-12 w-12 mb-4"></i>
+                                    <h4 class="font-bold text-2xl text-center">Estratégia e Investigação</h4>
+                                    <p class="text-gray-200 mt-2">(Passe o mouse para ver os detalhes)</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h4 class="font-bold text-xl mb-3">Estratégia e Investigação</h4>
+                                    <p class="text-sm text-blue-100">Entenda a importância do controle social e da articulação de redes. Capacite-se em metodologia de pesquisa em saúde, ética em pesquisa e desenvolva um projeto de intervenção prático como Trabalho de Conclusão de Curso.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Corpo Docente -->
+        <section id="docentes" class="py-20 bg-white">
+             <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2 section-title">Corpo Docente de Excelência</h2>
+                <p class="text-gray-600 mb-12">Composto com doutores, mestres e especialistas.</p>
+                <div class="bg-blue-50 p-8 rounded-lg grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <i data-feather="award" class="mx-auto h-12 w-12 text-blue-600 mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">Experiência Prática</h4>
+                        <p class="text-gray-600">Professores com grande vivência na gestão de sistemas de saúde.</p>
+                    </div>
+                    <div>
+                        <i data-feather="globe" class="mx-auto h-12 w-12 text-blue-600 mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">Formação Internacional</h4>
+                        <p class="text-gray-600">Docentes com formação internacional em desenvolvimento de liderança.</p>
+                    </div>
+                     <div>
+                        <i data-feather="book-open" class="mx-auto h-12 w-12 text-blue-600 mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">Didática Moderna</h4>
+                        <p class="text-gray-600">Treinados na aplicação de metodologias ativas de ensino com foco na prática.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estrutura -->
+        <section id="estrutura" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2 section-title">Nossa Estrutura</h2>
+                <p class="text-gray-600 mb-12">Um ambiente pensado para proporcionar a melhor experiência de aprendizado.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Espaço Didático da Escola de Saúde Pública</h3>
+                        <p class="text-gray-600 mb-6">Com mais de 1000m², nossa sede oferece uma infraestrutura completa para o seu desenvolvimento.</p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><i data-feather="check-circle" class="text-green-500 mr-3 mt-1 flex-shrink-0"></i> <span>Auditório para até 400 pessoas</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="text-green-500 mr-3 mt-1 flex-shrink-0"></i> <span>4 Salas de aula modernas e equipadas</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="text-green-500 mr-3 mt-1 flex-shrink-0"></i> <span>Consultórios simulados com sala espelhada</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="text-green-500 mr-3 mt-1 flex-shrink-0"></i> <span>Biblioteca, sala de estudos e de gravação</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="text-green-500 mr-3 mt-1 flex-shrink-0"></i> <span>Salas de reuniões e refeitório</span></li>
+                        </ul>
+                    </div>
+                    <div class="grid grid-cols-1 gap-6">
+                        <img src="https://i.imgur.com/H9tJjVJ.jpg" alt="Sala de aula da Escola de Saúde Pública de Florianópolis" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                        <img src="https://i.imgur.com/P9NOEC0.jpg" alt="Outra visão da sala de aula da Escola de Saúde Pública" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Inscrições e Cronograma -->
+        <section id="inscricoes" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Processo Seletivo</h2>
+                    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">Não perca a chance de fazer parte da próxima turma. Confira o cronograma e garanta sua vaga!</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-xl mb-6 text-center">Cronograma Principal</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center p-3 bg-white rounded-md shadow-sm">
+                            <span class="font-semibold text-gray-700">Publicação do Edital</span>
+                            <span class="text-blue-600 font-mono">23/10/2025</span>
+                        </li>
+                        <li class="flex justify-between items-center p-3 bg-white rounded-md shadow-sm">
+                            <span class="font-semibold text-green-700">Período de Inscrição</span>
+                            <span class="text-green-700 font-mono">23/10/2025 a 18/12/2025</span>
+                        </li>
+                         <li class="flex justify-between items-center p-3 bg-white rounded-md shadow-sm">
+                            <span class="font-semibold text-gray-700">Resultado Preliminar</span>
+                            <span class="text-blue-600 font-mono">26/01/2026</span>
+                        </li>
+                        <li class="flex justify-between items-center p-3 bg-white rounded-md shadow-sm">
+                            <span class="font-semibold text-gray-700">Resultado Final</span>
+                            <span class="text-blue-600 font-mono">Até 30/01/2026</span>
+                        </li>
+                        <li class="flex justify-between items-center p-3 bg-white rounded-md shadow-sm">
+                            <span class="font-semibold text-gray-700">Matrícula (1ª chamada)</span>
+                            <span class="text-blue-600 font-mono">02/02/2026 a 06/02/2026</span>
+                        </li>
+                    </ul>
+                    <p class="text-center mt-4 text-sm text-gray-500">Para detalhes sobre recursos e outras etapas, consulte o edital completo.</p>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxAJK4-Q4ronreW4BRYTjkw8xlJEIjW3cRYUtuBdyqjpeqvQ/viewform?usp=header" target="_blank" class="cta-button bg-cyan-400 text-gray-900 font-bold py-4 px-10 rounded-full text-xl inline-block">
+                        Faça sua Inscrição Agora
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h3 class="text-lg font-bold">Escola de Saúde Pública de Florianópolis</h3>
+                    <p class="text-gray-400">Formando líderes para o futuro da saúde.</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">Dúvidas? Entre em contato:</p>
+                    <a href="mailto:especializacoes@espfloripa.com" class="text-cyan-400 hover:underline">especializacoes@espfloripa.com</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Escola de Saúde Pública de Florianópolis. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        feather.replace();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                
+                // Animação suave no conteúdo (opcional, mas melhora a experiência)
+                if (!content.classList.contains('hidden')) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } else {
+                    content.style.maxHeight = null;
+                }
+
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Adicionando um pouco de CSS para a transição do max-height
+        const style = document.createElement('style');
+        style.textContent = `
+            .accordion-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+            .rotate-180 {
+                transform: rotate(180deg);
+            }
+        `;
+        document.head.append(style);
+    </script>
+</body>
+</html>
+
+
+
+
+
