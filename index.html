@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -325,6 +326,44 @@
                     <p class="text-center mt-4 text-sm text-gray-500">Para detalhes sobre recursos e outras etapas, consulte o edital completo.</p>
                 </div>
                 
+                <!-- Documentos Necessários -->
+                <div class="max-w-4xl mx-auto mt-12 border border-gray-200 rounded-lg overflow-hidden">
+                     <button class="accordion-header w-full flex justify-between items-center text-left p-5 bg-gray-50 hover:bg-gray-100 focus:outline-none transition">
+                        <h3 class="font-bold text-xl text-gray-800">Prepare os Documentos Necessários para a Inscrição!</h3>
+                        <i data-feather="chevron-down" class="transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content hidden p-6 bg-white">
+                        <p class="text-gray-600 mb-6">Modelos dos documentos a serem preenchidos e anexados no formulário de inscrição. Clique para baixar:</p>
+                        <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                            <li>
+                                <div class="flex flex-col ml-2">
+                                    <span class="font-semibold uppercase">DECLARAÇÃO DE LIBERAÇÃO DE CARGA HORÁRIA PELA CHEFIA IMEDIATA</span>
+                                    <a href="https://docs.google.com/document/d/1mAM74GLsMGZYnJxbbI38MetxmCx1NhK_7n-to_CCzAU/edit?usp=sharing" target="_blank" class="text-blue-600 hover:underline font-medium text-sm">[Acessar Modelo]</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex flex-col ml-2">
+                                    <span class="font-semibold uppercase">Declaração de atuação em cargo de gestão</span>
+                                    <a href="https://docs.google.com/document/d/1j2l6apAkW27yAkfUaYydgFfW3o6dXnw7rxA4UBpIZ6w/edit?usp=sharing" target="_blank" class="text-blue-600 hover:underline font-medium text-sm">[Acessar Modelo]</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <div class="flex flex-col ml-2">
+                                    <span class="font-semibold uppercase">Declaração de tempo de atuação no órgão de origem</span>
+                                    <a href="httpsD://docs.google.com/document/d/1X53TA5t3LYb6W29o9RULE1ptSt3rE9JbZHjVPoNeAbw/edit?usp=sharing" target="_blank" class="text-blue-600 hover:underline font-medium text-sm">[Acessar Modelo]</a>
+                                </div>
+                            </li>
+                            <li>
+                                 <div class="flex flex-col ml-2">
+                                    <span class="font-semibold uppercase">INFORME DE PRÉ-SELEÇÃO</span>
+                                    <span class="text-gray-500 text-sm">(Somente para candidatos não vinculados à PMF)</span>
+                                    <a href="httpsD://docs.google.com/document/d/16K3f3rA9JYAUzoSCoC0qpfA356DVXH_d8xDlEvF4z3s/edit?usp=sharing" target="_blank" class="text-blue-600 hover:underline font-medium text-sm">[Acessar Modelo]</a>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
                 <div class="text-center mt-12">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScHjAqdByMYVMqu1XHAHfpIJQgKYY7tnfz8B2loY_768PTINA/viewform?usp=header" target="_blank" class="cta-button bg-cyan-400 text-gray-900 font-bold py-4 px-10 rounded-full text-xl inline-block">
                         Faça sua Inscrição Agora
@@ -370,7 +409,8 @@
         accordionHeaders.forEach(header => {
             header.addEventListener('click', () => {
                 const content = header.nextElementSibling;
-                const icon = header.querySelector('i');
+                // Correção: Seleciona o 'svg' em vez do 'i'
+                const icon = header.querySelector('svg'); 
                 
                 content.classList.toggle('hidden');
                 
@@ -381,7 +421,10 @@
                     content.style.maxHeight = null;
                 }
 
-                icon.classList.toggle('rotate-180');
+                // Adiciona uma verificação para garantir que o ícone foi encontrado
+                if (icon) {
+                    icon.classList.toggle('rotate-180');
+                }
             });
         });
 
@@ -401,12 +444,5 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
 
 
