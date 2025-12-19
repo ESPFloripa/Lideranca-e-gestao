@@ -34,7 +34,7 @@
         .cta-button {
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .cta-button:hover {
+        .cta-button:not(.cursor-not-allowed):hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 168, 232, 0.4);
         }
@@ -82,7 +82,7 @@
             padding: 1.5rem;
         }
         .flip-card-front {
-            /* A cor de fundo foi removida para dar lugar à imagem */
+            /* Imagem de fundo via estilo inline no HTML */
         }
         .flip-card-back {
             background-color: #00529B; /* Cor azul do tema */
@@ -126,12 +126,15 @@
             <div class="container mx-auto px-6 py-20 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Especialização em Liderança e Gestão em Saúde</h1>
                 <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Capacite-se para os desafios da gestão no sistema de saúde, desenvolva habilidades de liderança e transforme a sua carreira.</p>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScHjAqdByMYVMqu1XHAHfpIJQgKYY7tnfz8B2loY_768PTINA/viewform?usp=header" target="_blank" class="cta-button bg-cyan-400 text-gray-900 font-bold py-3 px-8 rounded-full text-lg inline-block w-full sm:w-64 text-center">
-                        Inscreva-se Agora
-                    </a>
-                    <a href="https://drive.google.com/file/d/1F8-XMhwEv5iBEwrVAY08aw8-aiDhAIVk/view?usp=sharing" target="_blank" class="cta-button bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold py-3 px-8 rounded-full text-lg inline-block w-full sm:w-64 text-center">
+                <div class="flex flex-col lg:flex-row justify-center items-center gap-4">
+                    <span class="cta-button bg-gray-400 border-2 border-transparent text-white font-bold py-3 px-8 rounded-full text-lg inline-block w-full sm:w-64 text-center cursor-not-allowed leading-tight">
+                        Inscrições encerradas!
+                    </span>
+                    <a href="https://drive.google.com/file/d/1F8-XMhwEv5iBEwrVAY08aw8-aiDhAIVk/view?usp=sharing" target="_blank" class="cta-button bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold py-3 px-8 rounded-full text-lg inline-block w-full sm:w-64 text-center leading-tight">
                         Acesse o Edital
+                    </a>
+                    <a href="#resultados" class="cta-button bg-white text-blue-800 border-2 border-white font-bold py-3 px-8 rounded-full text-lg inline-block w-full sm:w-64 text-center leading-tight shadow-lg">
+                        Acesse os resultados
                     </a>
                 </div>
                 <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-blue-100">
@@ -334,6 +337,18 @@
                     </ul>
                     <p class="text-center mt-4 text-sm text-gray-500">Para detalhes sobre recursos e outras etapas, consulte o edital completo.</p>
                 </div>
+
+                <!-- Nova Seção: Acompanhe o Resultado -->
+                <div id="resultados" class="max-w-4xl mx-auto mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200 text-center">
+                    <h3 class="font-bold text-xl mb-4 text-blue-900">Acompanhe o Resultado</h3>
+                    <div class="flex flex-col items-center space-y-2">
+                        <span class="text-gray-700 font-medium">Resultado Preliminar da Homologação das Inscrições:</span>
+                        <a href="https://drive.google.com/file/d/1BfBUDckHc0FZvdDpkSm0qFZJc9GUszxo/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800 font-bold underline flex items-center">
+                            <i data-feather="file-text" class="mr-2 h-5 w-5"></i>
+                            Clique aqui para visualizar o documento
+                        </a>
+                    </div>
+                </div>
                 
                 <!-- Documentos Necessários -->
                 <div class="max-w-4xl mx-auto mt-12 border border-gray-200 rounded-lg overflow-hidden">
@@ -374,9 +389,9 @@
                 </div>
 
                 <div class="text-center mt-12">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScHjAqdByMYVMqu1XHAHfpIJQgKYY7tnfz8B2loY_768PTINA/viewform?usp=header" target="_blank" class="cta-button bg-cyan-400 text-gray-900 font-bold py-4 px-10 rounded-full text-xl inline-block">
-                        Faça sua Inscrição Agora
-                    </a>
+                    <span class="cta-button bg-gray-400 text-white font-bold py-4 px-10 rounded-full text-xl inline-block cursor-not-allowed border-2 border-transparent">
+                        Inscrições encerradas!
+                    </span>
                 </div>
 
             </div>
@@ -418,26 +433,22 @@
         accordionHeaders.forEach(header => {
             header.addEventListener('click', () => {
                 const content = header.nextElementSibling;
-                // Correção: Seleciona o 'svg' em vez do 'i'
                 const icon = header.querySelector('svg'); 
                 
                 content.classList.toggle('hidden');
                 
-                // Animação suave no conteúdo (opcional, mas melhora a experiência)
                 if (!content.classList.contains('hidden')) {
                     content.style.maxHeight = content.scrollHeight + "px";
                 } else {
                     content.style.maxHeight = null;
                 }
 
-                // Adiciona uma verificação para garantir que o ícone foi encontrado
                 if (icon) {
                     icon.classList.toggle('rotate-180');
                 }
             });
         });
 
-        // Adicionando um pouco de CSS para a transição do max-height
         const style = document.createElement('style');
         style.textContent = `
             .accordion-content {
@@ -453,9 +464,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
