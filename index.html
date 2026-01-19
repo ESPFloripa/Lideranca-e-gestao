@@ -81,9 +81,6 @@
             align-items: center;
             padding: 1.5rem;
         }
-        .flip-card-front {
-            /* Imagem de fundo via estilo inline no HTML */
-        }
         .flip-card-back {
             background-color: #00529B; /* Cor azul do tema */
             color: white;
@@ -169,7 +166,6 @@
 
                 <!-- Accordion for details -->
                 <div class="max-w-3xl mx-auto mt-12 space-y-4">
-                    <!-- Accordion Item 1: Objetivo -->
                     <div class="border border-gray-200 rounded-lg overflow-hidden">
                         <button class="accordion-header w-full flex justify-between items-center text-left p-5 bg-gray-50 hover:bg-gray-100 focus:outline-none transition">
                             <h3 class="text-xl font-semibold text-gray-800">Objetivo</h3>
@@ -180,7 +176,6 @@
                         </div>
                     </div>
 
-                    <!-- Accordion Item 2: Metodologia -->
                     <div class="border border-gray-200 rounded-lg overflow-hidden">
                         <button class="accordion-header w-full flex justify-between items-center text-left p-5 bg-gray-50 hover:bg-gray-100 focus:outline-none transition">
                             <h3 class="text-xl font-semibold text-gray-800">Metodologia Inovadora</h3>
@@ -191,7 +186,6 @@
                         </div>
                     </div>
 
-                    <!-- Accordion Item 3: Formato -->
                     <div class="border border-gray-200 rounded-lg overflow-hidden">
                         <button class="accordion-header w-full flex justify-between items-center text-left p-5 bg-gray-50 hover:bg-gray-100 focus:outline-none transition">
                             <h3 class="text-xl font-semibold text-gray-800">Formato</h3>
@@ -206,7 +200,6 @@
                 <div class="mt-16">
                     <h3 class="text-2xl font-semibold text-center text-gray-800 mb-8">O que você vai aprender?</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Card 1 -->
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.imgur.com/SfGmLc8.jpg');">
@@ -220,7 +213,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Card 2 -->
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.imgur.com/wLjmKpD.jpg');">
@@ -234,7 +226,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Card 3 -->
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.imgur.com/NMzt9PG.jpg');">
@@ -338,15 +329,37 @@
                     <p class="text-center mt-4 text-sm text-gray-500">Para detalhes sobre recursos e outras etapas, consulte o edital completo.</p>
                 </div>
 
-                <!-- Nova Seção: Acompanhe o Resultado -->
+                <!-- Seção: Acompanhe o Resultado -->
                 <div id="resultados" class="max-w-4xl mx-auto mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200 text-center">
                     <h3 class="font-bold text-xl mb-4 text-blue-900">Acompanhe o Resultado</h3>
-                    <div class="flex flex-col items-center space-y-2">
-                        <span class="text-gray-700 font-medium">Resultado Preliminar da Homologação das Inscrições:</span>
-                        <a href="https://drive.google.com/file/d/1BfBUDckHc0FZvdDpkSm0qFZJc9GUszxo/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800 font-bold underline flex items-center">
-                            <i data-feather="file-text" class="mr-2 h-5 w-5"></i>
-                            Clique aqui para visualizar o documento
-                        </a>
+                    <div class="flex flex-col items-center space-y-4">
+                        <!-- Itens Novos -->
+                        <div class="w-full max-w-lg bg-white p-4 rounded shadow-sm border border-blue-100">
+                            <ul class="text-left space-y-3">
+                                <li class="flex flex-col">
+                                    <span class="text-sm font-semibold text-gray-500 uppercase">Novo:</span>
+                                    <a href="https://drive.google.com/file/d/1ObKeb3FN762nMVv1IrTG0V_zuVMhQN0O/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800 font-bold underline flex items-center">
+                                        <i data-feather="check-square" class="mr-2 h-4 w-4"></i>
+                                        Resultado final da homologação das inscrições
+                                    </a>
+                                </li>
+                                <li class="flex flex-col">
+                                    <a href="https://drive.google.com/file/d/1CBXSjuaOe6wK6DkKCQdJhtTw-mxnRhJU/view?usp=drive_link" target="_blank" class="text-blue-600 hover:text-blue-800 font-bold underline flex items-center">
+                                        <i data-feather="trending-up" class="mr-2 h-4 w-4"></i>
+                                        Resultado preliminar do Processo Seletivo
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Item Anterior -->
+                        <div class="flex flex-col items-center pt-2">
+                            <span class="text-gray-600 text-sm mb-1">Resultado Preliminar da Homologação das Inscrições:</span>
+                            <a href="https://drive.google.com/file/d/1BfBUDckHc0FZvdDpkSm0qFZJc9GUszxo/view?usp=sharing" target="_blank" class="text-blue-500 hover:text-blue-700 font-medium underline flex items-center text-sm">
+                                <i data-feather="file-text" class="mr-2 h-4 w-4"></i>
+                                Visualizar homologação preliminar
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -399,7 +412,6 @@
 
     </main>
     
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
