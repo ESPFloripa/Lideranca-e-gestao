@@ -13,6 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Especialização em Liderança e Gestão em Saúde - ESP Florianópolis</title>
+    <meta name="description" content="Especialização em Liderança e Gestão em Saúde da Escola de Saúde Pública de Florianópolis: formação híbrida de 2 anos para profissionais que atuam ou pretendem atuar na gestão em saúde.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
@@ -34,7 +35,7 @@
         .cta-button {
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .cta-button:not(.cursor-not-allowed):hover {
+        .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 168, 232, 0.4);
         }
@@ -52,7 +53,7 @@
         .flip-card {
             background-color: transparent;
             width: 100%;
-            height: 320px; /* Increased height */
+            height: 320px;
             perspective: 1000px;
         }
         .flip-card-inner {
@@ -100,10 +101,10 @@
                 <a href="#sobre" class="text-gray-600 hover:text-blue-600">Sobre o Curso</a>
                 <a href="#docentes" class="text-gray-600 hover:text-blue-600">Corpo Docente</a>
                 <a href="#estrutura" class="text-gray-600 hover:text-blue-600">Estrutura</a>
-                <a href="#inscricoes" class="text-gray-600 hover:text-blue-600">Processo Seletivo</a>
+                <a href="#ingresso" class="text-gray-600 hover:text-blue-600">Como Ingressar</a>
             </div>
             <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none" aria-label="Abrir menu">
                     <i data-feather="menu"></i>
                 </button>
             </div>
@@ -113,7 +114,7 @@
             <a href="#sobre" class="block py-2 px-4 text-sm hover:bg-gray-100">Sobre o Curso</a>
             <a href="#docentes" class="block py-2 px-4 text-sm hover:bg-gray-100">Corpo Docente</a>
             <a href="#estrutura" class="block py-2 px-4 text-sm hover:bg-gray-100">Estrutura</a>
-            <a href="#inscricoes" class="block py-2 px-4 text-sm hover:bg-gray-100">Processo Seletivo</a>
+            <a href="#ingresso" class="block py-2 px-4 text-sm hover:bg-gray-100">Como Ingressar</a>
         </div>
     </header>
 
@@ -123,15 +124,12 @@
             <div class="container mx-auto px-6 py-20 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Especialização em Liderança e Gestão em Saúde</h1>
                 <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Capacite-se para os desafios da gestão no sistema de saúde, desenvolva habilidades de liderança e transforme a sua carreira.</p>
-                <div class="flex flex-col lg:flex-row justify-center items-center gap-4">
-                    <span class="cta-button bg-gray-400 border-2 border-transparent text-white font-bold py-3 px-8 rounded-full text-lg inline-block w-full sm:w-64 text-center cursor-not-allowed leading-tight">
-                        Inscrições encerradas!
-                    </span>
-                    <a href="https://drive.google.com/file/d/1F8-XMhwEv5iBEwrVAY08aw8-aiDhAIVk/view?usp=sharing" target="_blank" class="cta-button bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold py-3 px-8 rounded-full text-lg inline-block w-full sm:w-64 text-center leading-tight">
-                        Acesse o Edital
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#sobre" class="cta-button bg-white text-blue-800 border-2 border-white font-bold py-3 px-8 rounded-full text-lg inline-block w-full sm:w-64 text-center leading-tight shadow-lg">
+                        Conheça o curso
                     </a>
-                    <a href="#resultados" class="cta-button bg-white text-blue-800 border-2 border-white font-bold py-3 px-8 rounded-full text-lg inline-block w-full sm:w-64 text-center leading-tight shadow-lg">
-                        Acesse os resultados
+                    <a href="#ingresso" class="cta-button bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold py-3 px-8 rounded-full text-lg inline-block w-full sm:w-64 text-center leading-tight">
+                        Como ingressar
                     </a>
                 </div>
                 <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-blue-100">
@@ -140,12 +138,12 @@
                         <p>2 anos</p>
                     </div>
                     <div class="bg-white bg-opacity-10 p-4 rounded-lg">
-                        <h3 class="font-bold text-lg">Início</h3>
-                        <p>Março de 2026</p>
+                        <h3 class="font-bold text-lg">Formato</h3>
+                        <p>Híbrido: presencial + EAD</p>
                     </div>
                     <div class="bg-white bg-opacity-10 p-4 rounded-lg">
                         <h3 class="font-bold text-lg">Aulas</h3>
-                        <p>Quartas-feiras, 15h às 19h</p>
+                        <p>Encontros presenciais semanais</p>
                     </div>
                 </div>
             </div>
@@ -160,7 +158,7 @@
                 <!-- Video embed -->
                 <div class="max-w-3xl mx-auto my-12 rounded-lg overflow-hidden shadow-lg">
                     <div class="relative" style="padding-bottom: 56.25%;">
-                        <iframe src="https://www.youtube.com/embed/GayrLbWEfDI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full"></iframe>
+                        <iframe src="https://www.youtube.com/embed/GayrLbWEfDI" title="Vídeo de apresentação da Especialização em Liderança e Gestão em Saúde" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full"></iframe>
                     </div>
                 </div>
 
@@ -248,7 +246,7 @@
         <section id="docentes" class="py-20 bg-white">
              <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-gray-800 mb-2 section-title">Corpo Docente de Excelência</h2>
-                <p class="text-gray-600 mb-12">Composto com doutores, mestres e especialistas.</p>
+                <p class="text-gray-600 mb-12">Composto por doutores, mestres e especialistas.</p>
                 <div class="bg-blue-50 p-8 rounded-lg grid md:grid-cols-3 gap-8 text-center">
                     <div>
                         <i data-feather="award" class="mx-auto h-12 w-12 text-blue-600 mb-4"></i>
@@ -294,125 +292,19 @@
             </div>
         </section>
         
-        <!-- Inscrições e Cronograma -->
-        <section id="inscricoes" class="py-20 bg-white">
+        <!-- Como Ingressar (texto permanente, sem datas) -->
+        <section id="ingresso" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <div class="text-center">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Processo Seletivo</h2>
-                    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">Não perca a chance de fazer parte da próxima turma. Confira o cronograma e garanta sua vaga!</p>
+                <div class="max-w-3xl mx-auto bg-blue-50 p-8 md:p-10 rounded-lg border border-blue-200 text-center">
+                    <i data-feather="users" class="mx-auto h-12 w-12 text-blue-600 mb-4"></i>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Como Ingressar</h2>
+                    <p class="text-gray-600 mb-4">O ingresso na especialização acontece por meio de processo seletivo público, com edital próprio para cada nova turma.</p>
+                    <p class="text-gray-600 mb-8">Editais, cronogramas e resultados são divulgados nos canais oficiais da Escola de Saúde Pública de Florianópolis. Em caso de dúvidas, fale com a coordenação.</p>
+                    <a href="mailto:especializacoes@espfloripa.com" class="cta-button bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center justify-center">
+                        <i data-feather="mail" class="mr-2 h-5 w-5"></i>
+                        Fale com a coordenação
+                    </a>
                 </div>
-
-                <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg border border-gray-200">
-                    <h3 class="font-bold text-xl mb-6 text-center">Cronograma Principal</h3>
-                    <ul class="space-y-4">
-                        <li class="flex justify-between items-center p-3 bg-white rounded-md shadow-sm">
-                            <span class="font-semibold text-gray-700">Publicação do Edital</span>
-                            <span class="text-blue-600 font-mono">23/10/2025</span>
-                        </li>
-                        <li class="flex justify-between items-center p-3 bg-white rounded-md shadow-sm">
-                            <span class="font-semibold text-green-700">Período de Inscrição</span>
-                            <span class="text-green-700 font-mono">23/10/2025 a 18/12/2025</span>
-                        </li>
-                         <li class="flex justify-between items-center p-3 bg-white rounded-md shadow-sm">
-                            <span class="font-semibold text-gray-700">Resultado Preliminar</span>
-                            <span class="text-blue-600 font-mono">26/01/2026</span>
-                        </li>
-                        <li class="flex justify-between items-center p-3 bg-white rounded-md shadow-sm">
-                            <span class="font-semibold text-gray-700">Resultado Final</span>
-                            <span class="text-blue-600 font-mono">Até 30/01/2026</span>
-                        </li>
-                        <li class="flex justify-between items-center p-3 bg-white rounded-md shadow-sm">
-                            <span class="font-semibold text-gray-700">Matrícula (1ª chamada)</span>
-                            <span class="text-blue-600 font-mono">02/02/2026 a 06/02/2026</span>
-                        </li>
-                    </ul>
-                    <p class="text-center mt-4 text-sm text-gray-500">Para detalhes sobre recursos e outras etapas, consulte o edital completo.</p>
-                </div>
-
-                <!-- Seção: Acompanhe o Resultado -->
-                <div id="resultados" class="max-w-4xl mx-auto mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200 text-center">
-                    <h3 class="font-bold text-xl mb-4 text-blue-900">Acompanhe o Resultado</h3>
-                    <div class="flex flex-col items-center space-y-4">
-                        <!-- Itens de Resultados -->
-                        <div class="w-full max-w-lg bg-white p-4 rounded shadow-sm border border-blue-100">
-                            <ul class="text-left space-y-4">
-                                <li class="flex flex-col">
-                                    <span class="text-xs font-bold text-green-600 uppercase mb-1">Mais recente:</span>
-                                    <a href="https://drive.google.com/file/d/1ohM080uFlL3OllY_4nsgwzGC6PSeOGNk/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800 font-bold underline flex items-center">
-                                        <i data-feather="award" class="mr-2 h-4 w-4"></i>
-                                        Resultado Final do Processo Seletivo
-                                    </a>
-                                </li>
-                                <li class="flex flex-col pt-2 border-t border-gray-100">
-                                    <a href="https://drive.google.com/file/d/1CBXSjuaOe6wK6DkKCQdJhtTw-mxnRhJU/view?usp=drive_link" target="_blank" class="text-blue-600 hover:text-blue-800 font-bold underline flex items-center">
-                                        <i data-feather="trending-up" class="mr-2 h-4 w-4"></i>
-                                        Resultado preliminar do Processo Seletivo
-                                    </a>
-                                </li>
-                                <li class="flex flex-col">
-                                    <a href="https://drive.google.com/file/d/1ObKeb3FN762nMVv1IrTG0V_zuVMhQN0O/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800 font-bold underline flex items-center">
-                                        <i data-feather="check-square" class="mr-2 h-4 w-4"></i>
-                                        Resultado final da homologação das inscrições
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Item Anterior -->
-                        <div class="flex flex-col items-center pt-2">
-                            <span class="text-gray-600 text-sm mb-1">Histórico:</span>
-                            <a href="https://drive.google.com/file/d/1BfBUDckHc0FZvdDpkSm0qFZJc9GUszxo/view?usp=sharing" target="_blank" class="text-blue-500 hover:text-blue-700 font-medium underline flex items-center text-sm">
-                                <i data-feather="file-text" class="mr-2 h-4 w-4"></i>
-                                Resultado Preliminar da Homologação das Inscrições
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Documentos Necessários -->
-                <div class="max-w-4xl mx-auto mt-12 border border-gray-200 rounded-lg overflow-hidden">
-                     <button class="accordion-header w-full flex justify-between items-center text-left p-5 bg-gray-50 hover:bg-gray-100 focus:outline-none transition">
-                        <h3 class="font-bold text-xl text-gray-800">Prepare os Documentos Necessários para a Inscrição!</h3>
-                        <i data-feather="chevron-down" class="transform transition-transform duration-300"></i>
-                    </button>
-                    <div class="accordion-content hidden p-6 bg-white">
-                        <p class="text-gray-600 mb-6">Modelos dos documentos a serem preenchidos e anexados no formulário de inscrição. Clique para baixar:</p>
-                        <ol class="list-decimal list-inside space-y-4 text-gray-700">
-                            <li>
-                                <div class="flex flex-col ml-2">
-                                    <span class="font-semibold uppercase">DECLARAÇÃO DE LIBERAÇÃO DE CARGA HORÁRIA PELA CHEFIA IMEDIATA</span>
-                                    <a href="https://docs.google.com/document/d/1mAM74GLsMGZYnJxbbI38MetxmCx1NhK_7n-to_CCzAU/edit?usp=sharing" target="_blank" class="text-blue-600 hover:underline font-medium text-sm">[Acessar Modelo]</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex flex-col ml-2">
-                                    <span class="font-semibold uppercase">Declaração de atuação em cargo de gestão</span>
-                                    <a href="https://docs.google.com/document/d/16K3f3rA9JYAUzoSCoC0qpfA356DVXH_d8xDlEvF4z3s/edit?usp=drive_link" target="_blank" class="text-blue-600 hover:underline font-medium text-sm">[Acessar Modelo]</a>
-                                </div>
-                            </li>
-                            <li>
-                                 <div class="flex flex-col ml-2">
-                                    <span class="font-semibold uppercase">Declaração de tempo de atuação no órgão de origem</span>
-                                    <a href="https://docs.google.com/document/d/1X53TA5t3LYb6W29o9RULE1ptSt3rE9JbZHjVPoNeAbw/edit?usp=drive_link" target="_blank" class="text-blue-600 hover:underline font-medium text-sm">[Acessar Modelo]</a>
-                                </div>
-                            </li>
-                            <li>
-                                 <div class="flex flex-col ml-2">
-                                    <span class="font-semibold uppercase">INFORME DE PRÉ-SELEÇÃO</span>
-                                    <span class="text-gray-500 text-sm">(Somente para candidatos não vinculados à PMF)</span>
-                                    <a href="https://docs.google.com/document/d/1j2l6apAkW27yAkfUaYydgFfW3o6dXnw7rxA4UBpIZ6w/edit?usp=drive_link" target="_blank" class="text-blue-600 hover:underline font-medium text-sm">[Acessar Modelo]</a>
-                                </div>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <span class="cta-button bg-gray-400 text-white font-bold py-4 px-10 rounded-full text-xl inline-block cursor-not-allowed border-2 border-transparent">
-                        Inscrições encerradas!
-                    </span>
-                </div>
-
             </div>
         </section>
 
@@ -431,7 +323,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
-                <p>&copy; 2025 Escola de Saúde Pública de Florianópolis. Todos os direitos reservados.</p>
+                <p>&copy; <span id="ano-atual">2026</span> Escola de Saúde Pública de Florianópolis. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -439,11 +331,19 @@
     <script>
         feather.replace();
 
+        // Ano do rodapé atualizado automaticamente
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fecha o menu mobile ao clicar em um link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
         });
 
         const accordionHeaders = document.querySelectorAll('.accordion-header');
