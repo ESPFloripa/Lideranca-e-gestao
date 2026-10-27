@@ -16,7 +16,7 @@
     <meta name="description" content="Especialização em Liderança e Gestão em Saúde da Escola de Saúde Pública de Florianópolis. Inscrições abertas para a Turma 2027-2029.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.js"></script>
     
     <style>
         body {
@@ -523,7 +523,8 @@
     </footer>
     
     <script>
-        feather.replace();
+        // Se a biblioteca de ícones não carregar, o resto da página continua funcionando
+        try { if (window.feather) feather.replace(); } catch (e) { console.warn('Ícones não carregados:', e); }
 
         // Ano do rodapé atualizado automaticamente
         document.getElementById('ano-atual').textContent = new Date().getFullYear();
